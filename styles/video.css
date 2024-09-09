@@ -1,0 +1,158 @@
+.thumbnail {
+    width: 100%;
+    /* object-fit: contain;
+    object-position: center;
+    border: 2px solid black; */
+}
+
+.video-title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.video-info-grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.profile-picture {
+    width: 36px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.thumbnail-row {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.video-author,
+.video-stats {
+    font-size: 12px;
+    color: rgb(96, 96, 96);
+}
+
+.video-author {
+    margin-bottom: 4px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+}
+
+/*  == DISPLAY PROPERTY ==
+- display: block = takes up the entire line in their container
+- display: inline-block = only takes up as much space as needed
+- display: inline = takes elements */
+
+
+/* media queries */
+@media (max-width: 500px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 750px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 751px) and (max-width: 999px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1000px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .video-title {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .video-author,
+    .video-stats {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .video-title {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .video-author,
+    .video-stats {
+        font-size: 12px;
+    }
+}
+
+.video-time {
+    font-size: 12px;
+    font-weight: 500; /* 400 normal, 500 semi bold, 700 bold */
+    padding: 4px;
+    border-radius: 2px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 8px;
+    right: 5px;
+}
+
+.profile-picture-container {
+    display: inline-block;
+    position: relative;
+}
+
+.profile-tooltip {
+    display: flex;
+    align-items: center;
+    width: 220px;
+    height: 70px;
+    padding-left: 12px;
+    background-color: white;
+    box-shadow: 1px 1px 8px rgb(198, 198, 198);
+    border-radius: 5px;
+    position: absolute;
+    top: 45px;
+    transition: opacity 0.15s ease;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 300;
+}
+
+.profile-picture-container:hover .profile-tooltip {
+    opacity: 1;
+}
+
+.picture-tooltip {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.profile-detail {
+    padding: 0px 8px;
+    line-height: 20px;
+}
+
+.video-creator {
+    font-weight: bold;
+}
+
+.subscriber {
+    font-size: 14px;
+    color: rgb(107, 107, 107);
+}

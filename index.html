@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube.com Clone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/video.css">
+</head>
+<body>
+    <header class="header">
+        <div class="left-section">
+            <button class="humberger-menu-button" onclick="toggleSidebar()">
+                <img src="icons/hamburger-menu.svg" alt="" class="humberger-menu">
+            </button>
+            <img src="icons/youtube-logo.svg" alt="" class="youtube-logo">
+        </div>
+
+        <div class="middle-section">
+            <input class="search-bar" type="text" placeholder="Search">
+            <!-- Put position absolute inside position relative -->
+            <button class="search-button">
+                <img src="icons/search.svg" alt="" class="search-icon">
+                <div class="tooltip">Search</div>
+            </button>
+            <button class="voice-search-button">
+                <img src="icons/voice-search-icon.svg" alt="" class="voice-search-icon">
+                <div class="tooltip">Search with your voice</div>
+            </button>
+        </div>
+
+        <div class="right-section">
+            <div class="upload-icon-container">
+                <img src="icons/upload.svg" alt="" class="upload-icon">
+                <div class="tooltip">Create</div>
+            </div>
+            <div class="youtube-apps-icon-container">
+                <img src="icons/youtube-apps.svg" alt="" class="youtube-apps-icon">
+                <div class="tooltip">YouTube apps</div>
+            </div>
+            <div class="notifications-icon-container">
+                <img src="icons/notifications.svg" alt="" class="notifications-icon">
+                <div class="notifications-count">3</div>
+                <div class="tooltip">Notifications</div>
+            </div>
+            <img src="images/my-channel.jpeg" alt="" class="current-user-picture">
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <div class="sidebar-link">
+            <img src="icons/home.svg" alt="" class="home">
+            <div>Home</div>
+        </div>
+        <div class="sidebar-link">
+            <img src="icons/explore.svg" alt="" class="home">
+            <div>Explore</div>
+        </div>
+        <div class="sidebar-link">
+            <img src="icons/subscriptions.svg" alt="" class="home">
+            <div>Subscriptions</div>
+        </div>
+        <div class="sidebar-link">
+            <img src="icons/originals.svg" alt="" class="home">
+            <div>Originals</div>
+        </div>
+        <div class="sidebar-link">
+            <img src="icons/youtube-music.svg" alt="" class="home">
+            <div>YouTube Music</div>
+        </div>
+        <div class="sidebar-link">
+            <img src="icons/library.svg" alt="" class="home">
+            <div>Library</div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="video-grid">
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <a href="https://www.youtube.com/watch?v=carLDxc36VM&pp=ygUsd2ViIHBvcnRmb2xpbyBodG1sIGNzcyB3ZWIgcHJvZ3JhbW1pbmcgdW5wYXM%3D">
+                        <img class="thumbnail" src="images/thumbnail-1.webp" alt="thumbnail-1">
+                    </a>
+                    <div class="video-time">19:02</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <div class="profile-picture-container">
+                            <a href="https://www.youtube.com/@sandhikagalihWPU" target="_blank">
+                                <img src="images/channel-1.jpeg" alt="" class="profile-picture">
+                            </a>
+                            <div class="profile-tooltip">
+                                <img src="images/channel-1.jpeg" alt="" class="picture-tooltip">
+                                <div class="profile-detail">
+                                    <p class="video-creator">Web Programming UNPAS</p>
+                                    <p class="subscriber">895K subscribers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">5 PROJECT untuk PORTFOLIO Web Developer PEMULA</p>
+                        <p class="video-author">Web Programming UNPAS</p>
+                        <p class="video-stats">122K views &#183; 2 years ago</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <a href="https://www.youtube.com/watch?v=EWC0YB9xblE">
+                        <img class="thumbnail" src="images/thumbnail-2.webp" alt="thumbnail-2">
+                    </a>
+                    <div class="video-time">12:00</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <div class="profile-picture-container">
+                            <a href="https://www.youtube.com/@al1." target="_blank">
+                                <img src="images/channel-2.jpeg" alt="" class="profile-picture">
+                            </a>
+                            <div class="profile-tooltip">
+                                <img src="images/channel-2.jpeg" alt="" class="picture-tooltip">
+                                <div class="profile-detail">
+                                    <p class="video-creator">al1</p>
+                                    <p class="subscriber">350K subscribers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">valorant moments you can watch after your exams</p>
+                        <p class="video-author">al1</p>
+                        <p class="video-stats">588K views &#183; 3 months ago</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <a href="https://www.youtube.com/watch?v=iGvcyYwNV7E">
+                        <img class="thumbnail" src="images/thumbnail-3.webp" alt="thumbnail-3">
+                    </a>
+                    <div class="video-time">22:41</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <div class="profile-picture-container">
+                            <a href="https://www.youtube.com/@myplayliststhivii">
+                                <img src="images/channel-3.jpeg" alt="" class="profile-picture">
+                            </a>
+                            <div class="profile-tooltip">
+                                <img src="images/channel-3.jpeg" alt="" class="picture-tooltip">
+                                <div class="profile-detail">
+                                    <p class="video-creator">thivii</p>
+                                    <p class="subscriber">5.65K subscribers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">
+                            songs that make you feel alive (throwback playlist)</p>
+                        <p class="video-author">thivii</p>
+                        <p class="video-stats">2M views &#183; 3 months ago</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <a href="https://www.youtube.com/watch?v=xCSw6bPXZks">
+                        <img class="thumbnail" src="images/thumbnail-4.webp" alt="thumbnail-4">
+                    </a>
+                    <div class="video-time">15:18</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <div class="profile-picture-container">
+                            <a href="https://www.youtube.com/@TheCoderCoder">
+                                <img src="images/channel-4.jpeg" alt="" class="profile-picture">
+                            </a>
+                            <div class="profile-tooltip">
+                                <img src="images/channel-4.jpeg" alt="" class="picture-tooltip">
+                                <div class="profile-detail">
+                                    <p class="video-creator">Coder Coder</p>
+                                    <p class="subscriber">507K subscribers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">
+                            Please stop using px for font-size.</p>
+                        <p class="video-author">Coder Coder</p>
+                        <p class="video-stats">153K views &#183; 1 month ago</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <a href="https://www.youtube.com/watch?v=kPa7bsKwL-c">
+                        <img class="thumbnail" src="images/thumbnail-5.webp" alt="thumbnail-5">
+                    </a>
+                    <div class="video-time">4:13</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <div class="profile-picture-container">
+                            <a href="https://www.youtube.com/channel/UCNL1ZadSjHpjm4q9j2sVtOA">
+                                <img src="images/channel-5.jpeg" alt="" class="profile-picture">
+                            </a>
+                            <div class="profile-tooltip">
+                                <img src="images/channel-5.jpeg" alt="" class="picture-tooltip">
+                                <div class="profile-detail">
+                                    <p class="video-creator">Lady Gaga</p>
+                                    <p class="subscriber">24.5M subscribers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">
+                            Lady Gaga, Bruno Mars - Die With A Smile (Official Music Video)</p>
+                        <p class="video-author">Lady Gaga</p>
+                        <p class="video-stats">519K views &#183; 5 years ago</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <a href="https://www.youtube.com/watch?v=b5rLc5Z474I">
+                        <img class="thumbnail" src="images/thumbnail-6.webp" alt="thumbnail-6">
+                    </a>
+                    <div class="video-time">16:17</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <div class="channel-picture">
+                            <div class="profile-picture-container">
+                                <a href="https://www.youtube.com/@Kyedae">
+                                    <img src="images/channel-6.jpeg" alt="" class="profile-picture">
+                                </a>
+                                <div class="profile-tooltip">
+                                    <img src="images/channel-6.jpeg" alt="" class="picture-tooltip">
+                                    <div class="profile-detail">
+                                        <p class="video-creator">Kyedae</p>
+                                        <p class="subscriber">1.4M subscribers</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">
+                            VALORANT Tips and Tricks to get you started as a Beginner!</p>
+                        <p class="video-author">Kyedae</p>
+                        <p class="video-stats">272K views &#183; 1 month ago</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <a href="https://www.youtube.com/watch?v=lipikVebobY">
+                        <img class="thumbnail" src="images/thumbnail-7.webp" alt="thumbnail-7">
+                    </a>
+                    <div class="video-time">12:22</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <div class="profile-picture-container">
+                            <a href="https://www.youtube.com/@SydneySerena">
+                                <img src="images/channel-7.jpeg" alt="" class="profile-picture">
+                            </a>
+                            <div class="profile-tooltip">
+                                <img src="images/channel-7.jpeg" alt="" class="picture-tooltip">
+                                <div class="profile-detail">
+                                    <p class="video-creator">Sydney Serena</p>
+                                    <p class="subscriber">3.06M subscribers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">
+                            Alone but Not Lonely - ep. 1</p>
+                        <p class="video-author">Sydney Serena</p>
+                        <p class="video-stats">634K views &#183; 4 months ago</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <a href="https://www.youtube.com/watch?v=ZyhYwrMaI-s">
+                        <a href="https://www.youtube.com/channel/UCHAK6CyegY22Zj2GWrcaIxg">
+                            <img class="thumbnail" src="images/thumbnail-8.webp" alt="thumbnail-8">
+                        </a>
+                    </a>
+                    <div class="video-time">22:30</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <div class="profile-picture-container">
+                            <a href="https://www.youtube.com/@GadgetIn">
+                                <img src="images/channel-8.jpeg" alt="" class="profile-picture">
+                            </a>
+                            <div class="profile-tooltip">
+                                <img src="images/channel-8.jpeg" alt="" class="picture-tooltip">
+                                <div class="profile-detail">
+                                    <p class="video-creator">GadgetIn</p>
+                                    <p class="subscriber">12.6M subscribers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">
+                            BOS TURUN TANGAN 🤩!! UNBOXING GOOGLE PIXEL 9 PRO XL INDONESIA!</p>
+                        <p class="video-author">GadgetIn</p>
+                        <p class="video-stats">1.6M views &#183; 11 days ago</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <a href="https://www.youtube.com/watch?v=M8H2AsTaE4E">
+                        <img class="thumbnail" src="images/thumbnail-9.webp" alt="thumbnail-9">
+                    </a>
+                    <div class="video-time">10:17</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <div class="profile-picture-container">
+                            <a href="https://www.youtube.com/@imjenncho">
+                                <img src="images/channel-9.jpeg" alt="" class="profile-picture">
+                            </a>
+                            <div class="profile-tooltip">
+                                <img src="images/channel-9.jpeg" alt="" class="picture-tooltip">
+                                <div class="profile-detail">
+                                    <p class="video-creator">Jenn Cho</p>
+                                    <p class="subscriber">62.9K subscribers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">Day in the Life of a Software Engineer | Unglamorous & Realistic Work Day</p>
+                        <p class="video-author">Jenn Cho</p>
+                        <p class="video-stats">450K views &#183; 10 months ago</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="video-preview">
+                <section class="thumbnail-row">
+                    <a href="https://www.youtube.com/watch?v=pqkzDJPeDtI">
+                        <img class="thumbnail" src="images/thumbnail-10.webp" alt="thumbnail-10">
+                    </a>
+                    <div class="video-time">16:58</div>
+                </section>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <div class="profile-picture-container">
+                            <a href="https://www.youtube.com/@riasukmawijaya">
+                                <img src="images/channel-10.jpeg" alt="" class="profile-picture">
+                            </a>
+                            <div class="profile-tooltip">
+                                <img src="images/channel-10.jpeg" alt="" class="picture-tooltip">
+                                <div class="profile-detail">
+                                    <p class="video-creator">Ria SW</p>
+                                    <p class="subscriber">4.39M subscribers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">FRENCH STREET FOOD</p>
+                        <p class="video-author">Ria SW</p>
+                        <p class="video-stats">1.2M views &#183; 2 weeks ago</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <a href="https://www.youtube.com/watch?v=COgEJD_Fyec">
+                        <img class="thumbnail" src="images/thumbnail-11.webp" alt="thumbnail-11">
+                    </a>
+                    <div class="video-time">40:00</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <div class="profile-picture-container">
+                            <a href="https://www.youtube.com/@NessieJudge">
+                                <img src="images/channel-11.jpeg" alt="" class="profile-picture">
+                            </a>
+                            <div class="profile-tooltip">
+                                <img src="images/channel-11.jpeg" alt="" class="picture-tooltip">
+                                <div class="profile-detail">
+                                    <p class="video-creator">Nessie Judge</p>
+                                    <p class="subscriber">10.7M subscribers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">CERITA2 HOROR di KAMPUS! ft. SANDY "COC" | #NERROR</p>
+                        <p class="video-author">Nessie Judge</p>
+                        <p class="video-stats">1.6M views &#183; 4 weeks ago</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <a href="https://www.youtube.com/watch?v=8jPQjjsBbIc">
+                        <img class="thumbnail" src="images/thumbnail-12.webp" alt="thumbnail-12">
+                    </a>
+                    <div class="video-time">12:21</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <div class="profile-picture-container">
+                            <a href="https://www.youtube.com/teded">
+                                <img src="images/channel-12.jpeg" alt="" class="profile-picture">
+                            </a>
+                            <div class="profile-tooltip">
+                                <img src="images/channel-12.jpeg" alt="" class="picture-tooltip">
+                                <div class="profile-detail">
+                                    <p class="video-creator">TED</p>
+                                    <p class="subscriber">24.9M subscribers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">How to stay calm when you know you'll be stressed | Daniel Levitin | TED</p>
+                        <p class="video-author">TED</p>
+                        <p class="video-stats">17M views &#183; 8 years ago</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const body = document.body;
+
+            // Toggle class 'open' pada sidebar
+            sidebar.classList.toggle('open');
+
+            // Toggle class 'body-sidebar-open' pada body
+            body.classList.toggle('body-sidebar-open');
+        }
+    </script>
+</body>
+</html>
